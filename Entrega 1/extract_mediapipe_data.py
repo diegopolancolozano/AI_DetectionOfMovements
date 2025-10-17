@@ -1,4 +1,5 @@
 import json
+import math
 import os
 
 import cv2
@@ -8,7 +9,7 @@ from tqdm import tqdm
 
 # === CONFIG ===
 VIDEOS_DIR = "Videos APO"
-LABEL_FILE = "project-5-at-2025-10-17-02-14-902d1c28.json"
+LABEL_FILE = "project-label-studio.json"
 OUTPUT_CSV = "mediapipe_labels_dataset.csv"
 
 # === MEDIAPIPE ===
@@ -52,14 +53,16 @@ def process_video(video_path, video_id):
 
     # Obtener información del video
     total_frames_opencv = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-    fps = cap.get(cv2.CAP_PROP_FPS)
+    fps = cap.get(cv2.CAP_PROP_FPS) or 0.0
+    width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+    height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     
     # Obtener el frame máximo de Label Studio
     max_frame_labelstudio = get_max_label_frame(video_id)
     
     # Calcular factor de conversión
     # OpenCV cuenta todos los frames, Label Studio puede usar un índice diferente
-    frame_ratio = max_frame_labelstudio / total_frames_opencv if max_frame_labelstudio else 1.0
+    frame_ratio = (max_frame_labelstudio / total_frames_opencv) if (max_frame_labelstudio and total_frames_opencv) else 1.0
     
     print(f"  📊 Frames OpenCV: {total_frames_opencv}, Label Studio máx: {max_frame_labelstudio}, FPS: {fps:.2f}")
     print(f"  🔄 Ratio de conversión: {frame_ratio:.4f}")
@@ -84,14 +87,58 @@ def process_video(video_path, video_id):
             row = {
                 'video_id': video_id, 
                 'frame_opencv': frame_idx_opencv,
-                'frame_labelstudio': frame_idx_labelstudio
+                'frame_labelstudio': frame_idx_labelstudio,
+                'fps': fps,
+                'timestamp_ms': (frame_idx_opencv / fps * 1000.0) if fps > 0 else None,
+                'width': width,
+                'height': height
             }
             
+            xs, ys, vis_vals = [], [], []
             for i, lm in enumerate(landmarks):
                 row[f'x_{i}'] = lm.x
                 row[f'y_{i}'] = lm.y
                 row[f'z_{i}'] = lm.z
                 row[f'v_{i}'] = lm.visibility
+                xs.append(lm.x)
+                ys.append(lm.y)
+                vis_vals.append(lm.visibility)
+
+            # Calidad: media de visibility y número de landmarks visibles
+            row['mean_visibility'] = float(sum(vis_vals) / len(vis_vals)) if vis_vals else 0.0
+            row['num_visible_lms'] = int(sum(1 for v in vis_vals if v >= 0.5))
+
+            # Centro de caderas y escala de torso (normalización espacial)
+            try:
+                lh, rh = landmarks[23], landmarks[24]   # left/right hip
+                ls, rs = landmarks[11], landmarks[12]   # left/right shoulder
+                hip_cx = (lh.x + rh.x) / 2.0
+                hip_cy = (lh.y + rh.y) / 2.0
+                # Distancias de torso en coordenadas normalizadas
+                d_l = math.hypot(ls.x - lh.x, ls.y - lh.y)
+                d_r = math.hypot(rs.x - rh.x, rs.y - rh.y)
+                torso_scale = max((d_l + d_r) / 2.0, 1e-6)
+                row['hip_center_x'] = hip_cx
+                row['hip_center_y'] = hip_cy
+                row['torso_scale'] = torso_scale
+            except Exception:
+                row['hip_center_x'] = None
+                row['hip_center_y'] = None
+                row['torso_scale'] = None
+
+            # Bounding box del esqueleto
+            if xs and ys:
+                xmin, xmax = float(min(xs)), float(max(xs))
+                ymin, ymax = float(min(ys)), float(max(ys))
+                row['bbox_xmin'] = xmin
+                row['bbox_ymin'] = ymin
+                row['bbox_xmax'] = xmax
+                row['bbox_ymax'] = ymax
+                row['bbox_area'] = max((xmax - xmin), 0.0) * max((ymax - ymin), 0.0)
+                row['bbox_aspect'] = (xmax - xmin) / (ymax - ymin) if (ymax - ymin) not in (0, None) else None
+            else:
+                row['bbox_xmin'] = row['bbox_ymin'] = row['bbox_xmax'] = row['bbox_ymax'] = None
+                row['bbox_area'] = row['bbox_aspect'] = None
 
             row['label'] = extract_label_for_frame(video_id, frame_idx_labelstudio)
             data.append(row)

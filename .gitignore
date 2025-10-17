@@ -1,5 +1,5 @@
 # Videos folder
-Videos APO/
+Entrega 1/Videos APO/
 
 # Python virtual environment
 .venv/
@@ -21,6 +21,8 @@ __pycache__/
 # LibreOffice lock files
 .~lock.*#
 
+
+Entrega 1/extract_mediapipe_data.csv
 # IDE settings
 .vscode/
 .idea/
