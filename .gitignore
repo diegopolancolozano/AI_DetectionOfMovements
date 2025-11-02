@@ -2,6 +2,14 @@
 Entrega 1/Videos APO/
 Entrega 1/skeleton_videos/
 
+# Entrega 2 videos (ignore)
+Entrega 2/videos familiaDiego/*.mp4
+Entrega 2/videos otroGrupo/*.mp4
+
+# Combined datasets (keep)
+!Entrega 2/mediapipe_labels_dataset_combined.csv
+!Entrega 2/mediapipe_labels_dataset_combined_enriched.csv
+
 # Python virtual environment
 .venv/
 venv/
