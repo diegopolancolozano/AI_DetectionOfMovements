@@ -22,7 +22,7 @@ SCALER_PATH = "models/scaler.joblib"
 LABEL_ENCODER_PATH = "models/label_encoder.joblib"
 
 # Buffer para suavizado de predicciones (última N predicciones)
-PREDICTION_BUFFER_SIZE = 5
+PREDICTION_BUFFER_SIZE = 10  # Aumentado para mejor estabilidad
 
 # CONFIGURACIÓN PARA DROIDCAM
 # Cambia estos valores si es necesario
@@ -51,9 +51,20 @@ mp_drawing = mp.solutions.drawing_utils
 pose = mp_pose.Pose(
     static_image_mode=False,
     model_complexity=1,  # 0=lite, 1=full, 2=heavy - usa 0 para más velocidad
+    smooth_landmarks=True,  # Suavizado de landmarks para mejor estabilidad
     min_detection_confidence=0.5,
     min_tracking_confidence=0.5
 )
+
+# === FUNCIÓN DE COMBINACIÓN DE CLASES ===
+def combine_classes(label):
+    """Combina clases similares para simplificar el modelo"""
+    if label in ["Walk forward", "Walk backward"]:
+        return "Walking"
+    elif label in ["Get up", "Sit down"]:
+        return "Transition"
+    else:
+        return label
 
 # === FUNCIONES DE EXTRACCIÓN DE FEATURES ===
 
@@ -71,70 +82,119 @@ def angle_deg(ax, ay, bx, by, cx, cy):
 
 def extract_features_from_landmarks(landmarks, prev_landmarks=None, fps=30.0):
     """
-    Extrae todas las características necesarias desde los landmarks de MediaPipe.
+    Extrae SOLO las 16 features biomecánicas usadas en el entrenamiento.
+    Replica exactamente la lógica de extract_mediapipe_selected_features.py
     """
     features = {}
     
-    # Extraer coordenadas básicas
+    # === EXTRAER COORDENADAS Y VISIBILIDAD ===
     xs, ys, vis_vals = [], [], []
-    for i, lm in enumerate(landmarks):
+    for lm in landmarks:
         xs.append(lm.x)
         ys.append(lm.y)
         vis_vals.append(lm.visibility)
     
-    # === FEATURES DE CALIDAD ===
-    features['mean_visibility'] = float(sum(vis_vals) / len(vis_vals)) if vis_vals else 0.0
-    features['num_visible_lms'] = int(sum(1 for v in vis_vals if v >= 0.5))
+    if not xs or not ys:
+        return None
     
-    # === BOUNDING BOX (requerido por el modelo) ===
-    if xs and ys:
-        xmin, xmax = float(min(xs)), float(max(xs))
-        ymin, ymax = float(min(ys)), float(max(ys))
-        features['bbox_xmin'] = xmin
-        features['bbox_ymin'] = ymin
-        features['bbox_xmax'] = xmax
-        features['bbox_ymax'] = ymax
-        features['bbox_area'] = max((xmax - xmin), 0.0) * max((ymax - ymin), 0.0)
-        features['bbox_aspect'] = (xmax - xmin) / (ymax - ymin) if (ymax - ymin) > 0 else None
-    else:
-        features['bbox_xmin'] = features['bbox_ymin'] = None
-        features['bbox_xmax'] = features['bbox_ymax'] = None
-        features['bbox_area'] = features['bbox_aspect'] = None
+    # === 3-5. hip_center_x, hip_center_y, torso_scale ===
+    try:
+        lh, rh = landmarks[23], landmarks[24]   # left/right hip
+        ls, rs = landmarks[11], landmarks[12]   # left/right shoulder
+        hip_cx = (lh.x + rh.x) / 2.0
+        hip_cy = (lh.y + rh.y) / 2.0
+        d_l = math.hypot(ls.x - lh.x, ls.y - lh.y)
+        d_r = math.hypot(rs.x - rh.x, rs.y - rh.y)
+        torso_scale = max((d_l + d_r) / 2.0, 1e-6)
+        features['hip_center_x'] = hip_cx
+        features['hip_center_y'] = hip_cy
+        features['torso_scale'] = torso_scale
+    except Exception:
+        hip_cx, hip_cy = None, None
+        torso_scale = None
+        features['hip_center_x'] = None
+        features['hip_center_y'] = None
+        features['torso_scale'] = None
     
-    # === VELOCIDADES (requiere frame anterior) ===
-    keys = [15, 16, 25, 26, 27, 28]  # muñecas, rodillas, tobillos
-    for i in keys:
-        if prev_landmarks is not None and i < len(landmarks) and i < len(prev_landmarks):
-            dx = landmarks[i].x - prev_landmarks[i].x
-            dy = landmarks[i].y - prev_landmarks[i].y
-            features[f'speed_{i}'] = math.sqrt(dx**2 + dy**2) * fps
-        else:
-            features[f'speed_{i}'] = 0.0
+    # === 6-7. bbox_area, bbox_aspect ===
+    xmin, xmax = float(min(xs)), float(max(xs))
+    ymin, ymax = float(min(ys)), float(max(ys))
+    features['bbox_area'] = max((xmax - xmin), 0.0) * max((ymax - ymin), 0.0)
+    features['bbox_aspect'] = (xmax - xmin) / (ymax - ymin) if (ymax - ymin) > 0 else None
     
-    # === ÁNGULOS DE ARTICULACIONES ===
-    # Rodillas
+    # === 8-9. knee_left_deg, knee_right_deg ===
     features['knee_left_deg'] = angle_deg(
-        landmarks[23].x, landmarks[23].y,
-        landmarks[25].x, landmarks[25].y,
-        landmarks[27].x, landmarks[27].y
+        landmarks[23].x, landmarks[23].y,  # cadera izq
+        landmarks[25].x, landmarks[25].y,  # rodilla izq
+        landmarks[27].x, landmarks[27].y   # tobillo izq
     )
     features['knee_right_deg'] = angle_deg(
-        landmarks[24].x, landmarks[24].y,
-        landmarks[26].x, landmarks[26].y,
-        landmarks[28].x, landmarks[28].y
+        landmarks[24].x, landmarks[24].y,  # cadera der
+        landmarks[26].x, landmarks[26].y,  # rodilla der
+        landmarks[28].x, landmarks[28].y   # tobillo der
     )
     
-    # Codos
+    # === 10-11. elbow_left_deg, elbow_right_deg ===
     features['elbow_left_deg'] = angle_deg(
-        landmarks[11].x, landmarks[11].y,
-        landmarks[13].x, landmarks[13].y,
-        landmarks[15].x, landmarks[15].y
+        landmarks[11].x, landmarks[11].y,  # hombro izq
+        landmarks[13].x, landmarks[13].y,  # codo izq
+        landmarks[15].x, landmarks[15].y   # muñeca izq
     )
     features['elbow_right_deg'] = angle_deg(
-        landmarks[12].x, landmarks[12].y,
-        landmarks[14].x, landmarks[14].y,
-        landmarks[16].x, landmarks[16].y
+        landmarks[12].x, landmarks[12].y,  # hombro der
+        landmarks[14].x, landmarks[14].y,  # codo der
+        landmarks[16].x, landmarks[16].y   # muñeca der
     )
+    
+    # === 12-13. speed_15, speed_16 (velocidad muñecas) ===
+    if prev_landmarks is not None and fps > 0:
+        dx_15 = landmarks[15].x - prev_landmarks[15].x
+        dy_15 = landmarks[15].y - prev_landmarks[15].y
+        features['speed_15'] = math.sqrt(dx_15**2 + dy_15**2) * fps
+        
+        dx_16 = landmarks[16].x - prev_landmarks[16].x
+        dy_16 = landmarks[16].y - prev_landmarks[16].y
+        features['speed_16'] = math.sqrt(dx_16**2 + dy_16**2) * fps
+    else:
+        features['speed_15'] = 0.0
+        features['speed_16'] = 0.0
+    
+    # === 14. velocidad_centro_cuerpo ===
+    if prev_landmarks is not None and hip_cx is not None and fps > 0:
+        prev_hip_cx = (prev_landmarks[23].x + prev_landmarks[24].x) / 2.0
+        prev_hip_cy = (prev_landmarks[23].y + prev_landmarks[24].y) / 2.0
+        dx_center = hip_cx - prev_hip_cx
+        dy_center = hip_cy - prev_hip_cy
+        features['velocidad_centro_cuerpo'] = math.sqrt(dx_center**2 + dy_center**2) * fps
+    else:
+        features['velocidad_centro_cuerpo'] = 0.0
+    
+    # === 15. apertura_piernas_norm ===
+    if torso_scale and torso_scale > 0:
+        apertura_piernas = abs(landmarks[27].x - landmarks[28].x)  # tobillos
+        features['apertura_piernas_norm'] = apertura_piernas / torso_scale
+    else:
+        features['apertura_piernas_norm'] = None
+    
+    # === 16. ancho_hombros ===
+    features['ancho_hombros'] = abs(landmarks[11].x - landmarks[12].x)
+    
+    # === 17. altura_normalizada ===
+    try:
+        nose = landmarks[0]
+        ankle_l, ankle_r = landmarks[27], landmarks[28]
+        ankle_avg_y = (ankle_l.y + ankle_r.y) / 2.0
+        features['altura_normalizada'] = abs(nose.y - ankle_avg_y)
+    except Exception:
+        features['altura_normalizada'] = None
+    
+    # === 18. dist_vertical_cabeza_cadera ===
+    try:
+        nose = landmarks[0]
+        hip_avg_y = (landmarks[23].y + landmarks[24].y) / 2.0
+        features['dist_vertical_cabeza_cadera'] = abs(nose.y - hip_avg_y)
+    except Exception:
+        features['dist_vertical_cabeza_cadera'] = None
     
     return features
 
@@ -284,9 +344,12 @@ def main():
                     landmarks = results.pose_landmarks.landmark
                     features = extract_features_from_landmarks(landmarks, prev_landmarks, fps)
                     
-                    # Predecir solo si tenemos suficiente calidad
-                    if features['mean_visibility'] > 0.5 and features['num_visible_lms'] >= 20:
+                    # Predecir si tenemos features válidas
+                    if features:
                         label, confidence = predict_activity(features, model, scaler, label_encoder)
+                        
+                        # Combinar clases (si el modelo predice clases originales)
+                        label = combine_classes(label)
                         
                         # Agregar al buffer para suavizado
                         prediction_buffer.append(label)
@@ -299,40 +362,45 @@ def main():
                         else:
                             smoothed_label = label
                         
-                        # Mostrar predicción en el frame
+                        # Mostrar predicción en el frame con fondo
+                        overlay = frame.copy()
+                        cv2.rectangle(overlay, (5, 5), (450, 125), (0, 0, 0), -1)
+                        cv2.addWeighted(overlay, 0.6, frame, 0.4, 0, frame)
+                        
                         cv2.putText(
                             frame,
                             f"Actividad: {smoothed_label}",
-                            (10, 30),
+                            (10, 35),
                             cv2.FONT_HERSHEY_SIMPLEX,
-                            0.8,
+                            0.9,
                             (0, 255, 0),
                             2
                         )
                         cv2.putText(
                             frame,
                             f"Confianza: {confidence:.1%}",
-                            (10, 65),
+                            (10, 70),
                             cv2.FONT_HERSHEY_SIMPLEX,
-                            0.6,
-                            (0, 255, 0),
+                            0.7,
+                            (255, 255, 0),
                             2
                         )
                         
-                        # Mostrar calidad
+                        # Debug: buffer de predicciones
+                        buffer_text = ", ".join(list(prediction_buffer)[-3:])
                         cv2.putText(
                             frame,
-                            f"Landmarks: {features['num_visible_lms']}/33",
-                            (10, 95),
+                            f"Buffer: {buffer_text}",
+                            (10, 100),
                             cv2.FONT_HERSHEY_SIMPLEX,
                             0.5,
-                            (255, 255, 0),
+                            (200, 200, 200),
                             1
                         )
                     else:
                         cv2.putText(
                             frame,
-                            "Calidad insuficiente - Mejora iluminacion",
+                            "Features insuficientes",
                             (10, 30),
                             cv2.FONT_HERSHEY_SIMPLEX,
                             0.7,

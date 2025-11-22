@@ -86,6 +86,15 @@ def extract_label_for_frame(video_id, frame_idx_labelstudio, label_data):
                     return label
     return "Unlabeled"
 
+def combine_classes(label):
+    """Combina clases similares para simplificar el modelo"""
+    if label in ["Walk forward", "Walk backward"]:
+        return "Walking"
+    elif label in ["Get up", "Sit down"]:
+        return "Transition"
+    else:
+        return label
+
 def process_video(video_path, video_id, label_data, source="Entrega1"):
     """Extrae landmarks de cada frame y los une con etiquetas temporales."""
     video_path = Path(video_path)
@@ -184,7 +193,9 @@ def process_video(video_path, video_id, label_data, source="Entrega1"):
                 row['bbox_xmin'] = row['bbox_ymin'] = row['bbox_xmax'] = row['bbox_ymax'] = None
                 row['bbox_area'] = row['bbox_aspect'] = None
 
-            row['label'] = extract_label_for_frame(video_id, frame_idx_labelstudio, label_data)
+            # Extraer etiqueta y combinar clases
+            original_label = extract_label_for_frame(video_id, frame_idx_labelstudio, label_data)
+            row['label'] = combine_classes(original_label)
             data.append(row)
 
         frame_idx_opencv += 1

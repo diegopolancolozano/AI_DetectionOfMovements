@@ -21,7 +21,7 @@ MODEL_PATH = "models/best_model.joblib"
 SCALER_PATH = "models/scaler.joblib"
 LABEL_ENCODER_PATH = "models/label_encoder.joblib"
 
-VIDEO_PATH = "/home/oscar/Documents/APO III/AI_DetectionOfMovements/Entrega 1/Videos APO/mio.mp4"
+VIDEO_PATH = "C:\Users\DELL\Desktop\Programacion\s7\apo\proyectoFinal\AI_DetectionOfMovements\Entrega 2 Y 3 (Codigo actualizado)\videoUltimoParaProbar.mp4"
 OUTPUT_VIDEO_PATH = "video_2_analyzed.mp4"
 
 # === PARÁMETROS ===

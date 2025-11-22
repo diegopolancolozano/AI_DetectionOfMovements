@@ -17,12 +17,12 @@ import pandas as pd
 warnings.filterwarnings('ignore', category=UserWarning)
 
 # === CONFIGURACIÓN ===
-MODEL_PATH = "models/xgb_model.joblib"
+MODEL_PATH = "models/best_model.joblib"  # Usar el mejor modelo (Random Forest)
 SCALER_PATH = "models/scaler.joblib"
 LABEL_ENCODER_PATH = "models/label_encoder.joblib"
 
 # Buffer para suavizado de predicciones (última N predicciones)
-PREDICTION_BUFFER_SIZE = 5
+PREDICTION_BUFFER_SIZE = 10  # Aumentado para mejor estabilidad
 
 # === CARGAR MODELO Y TRANSFORMADORES ===
 print("🔄 Cargando modelo y transformadores...")
@@ -41,9 +41,21 @@ mp_pose = mp.solutions.pose
 mp_drawing = mp.solutions.drawing_utils
 pose = mp_pose.Pose(
     static_image_mode=False,
+    model_complexity=1,  # Balance entre velocidad y precisión
+    smooth_landmarks=True,  # Suavizado de landmarks
     min_detection_confidence=0.5,
     min_tracking_confidence=0.5
 )
+
+# === FUNCIÓN DE COMBINACIÓN DE CLASES ===
+def combine_classes(label):
+    """Combina clases similares para simplificar el modelo"""
+    if label in ["Walk forward", "Walk backward"]:
+        return "Walking"
+    elif label in ["Get up", "Sit down"]:
+        return "Transition"
+    else:
+        return label
 
 # === FUNCIONES DE EXTRACCIÓN DE FEATURES ===
 
@@ -290,6 +302,9 @@ def main():
             if features:
                 label, confidence = predict_activity(features, model, scaler, label_encoder)
                 
+                # Combinar clases (si el modelo predice clases originales)
+                label = combine_classes(label)
+                
                 # Agregar al buffer para suavizado
                 prediction_buffer.append(label)
                 
@@ -303,11 +318,17 @@ def main():
                     smoothed_label = label
                     smoothed_confidence = confidence
                 
-                # Mostrar predicción en el frame
+                # Mostrar predicción en el frame con fondo para mejor visibilidad
+                # Fondo negro semi-transparente
+                overlay = frame.copy()
+                cv2.rectangle(overlay, (5, 5), (400, 110), (0, 0, 0), -1)
+                cv2.addWeighted(overlay, 0.6, frame, 0.4, 0, frame)
+                
+                # Texto
                 cv2.putText(
                     frame,
                     f"Actividad: {smoothed_label}",
-                    (10, 30),
+                    (10, 35),
                     cv2.FONT_HERSHEY_SIMPLEX,
                     1.0,
                     (0, 255, 0),
@@ -316,11 +337,23 @@ def main():
                 cv2.putText(
                     frame,
                     f"Confianza: {confidence:.2%}",
-                    (10, 70),
+                    (10, 75),
                     cv2.FONT_HERSHEY_SIMPLEX,
                     0.7,
-                    (0, 255, 0),
+                    (255, 255, 0),
                     2
+                )
+                
+                # Debug: mostrar últimas predicciones del buffer
+                buffer_text = ", ".join(list(prediction_buffer)[-3:])
+                cv2.putText(
+                    frame,
+                    f"Buffer: {buffer_text}",
+                    (10, 100),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.5,
+                    (200, 200, 200),
+                    1
                 )
             else:
                 cv2.putText(
