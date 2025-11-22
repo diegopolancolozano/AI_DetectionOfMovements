@@ -1,0 +1,2804 @@
+{
+  "video": "Entrega 2 Y 3 (Dodigo actualizado)\\Video 10.mp4",
+  "total_frames": 391,
+  "fps": 29.9234693877551,
+  "resolution": "848x480",
+  "duration": "13.1s",
+  "predictions_count": 391,
+  "transitions": 15,
+  "confidence_avg": 0.8542802244862652,
+  "confidence_min": 0.3992280747424971,
+  "confidence_max": 0.9930876333375805,
+  "confidence_median": 0.8624408703219323,
+  "activities_detected": {
+    "Get up": 76,
+    "Sitting": 18,
+    "Walk forward": 107,
+    "Walk backward": 80,
+    "Turn": 74,
+    "Sit down": 36
+  },
+  "confidence_by_activity": {
+    "Get up": {
+      "average": 0.8427222926849565,
+      "min": 0.3992280747424971,
+      "max": 0.99,
+      "median": 0.8414937898925852,
+      "count": 76
+    },
+    "Sitting": {
+      "average": 0.7456379429212041,
+      "min": 0.4282058823641585,
+      "max": 0.99,
+      "median": 0.7768753581316838,
+      "count": 18
+    },
+    "Walk forward": {
+      "average": 0.8513842824407605,
+      "min": 0.5050272553121128,
+      "max": 0.99,
+      "median": 0.8624300341143553,
+      "count": 107
+    },
+    "Walk backward": {
+      "average": 0.8470586518574491,
+      "min": 0.5050085306815933,
+      "max": 0.99,
+      "median": 0.8396135212945907,
+      "count": 80
+    },
+    "Turn": {
+      "average": 0.8805367133920093,
+      "min": 0.5247953098387971,
+      "max": 0.9930876333375805,
+      "median": 0.9000691164930292,
+      "count": 74
+    },
+    "Sit down": {
+      "average": 0.9036850943534811,
+      "min": 0.6270125401904807,
+      "max": 0.99,
+      "median": 0.99,
+      "count": 36
+    }
+  },
+  "predictions": [
+    {
+      "frame": 1,
+      "label": "Get up",
+      "confidence": 0.3992280747424971,
+      "current": null,
+      "stability": 0
+    },
+    {
+      "frame": 2,
+      "label": "Sitting",
+      "confidence": 0.47705417211863316,
+      "current": null,
+      "stability": 0
+    },
+    {
+      "frame": 3,
+      "label": "Sitting",
+      "confidence": 0.4282058823641585,
+      "current": null,
+      "stability": 0
+    },
+    {
+      "frame": 4,
+      "label": "Sitting",
+      "confidence": 0.483887138615028,
+      "current": null,
+      "stability": 0
+    },
+    {
+      "frame": 5,
+      "label": "Get up",
+      "confidence": 0.668586935986928,
+      "current": null,
+      "stability": 1
+    },
+    {
+      "frame": 6,
+      "label": "Get up",
+      "confidence": 0.7990838402604169,
+      "current": "Get up",
+      "stability": 1
+    },
+    {
+      "frame": 7,
+      "label": "Get up",
+      "confidence": 0.7692852066807008,
+      "current": "Get up",
+      "stability": 2
+    },
+    {
+      "frame": 8,
+      "label": "Get up",
+      "confidence": 0.7485483473658219,
+      "current": "Get up",
+      "stability": 3
+    },
+    {
+      "frame": 9,
+      "label": "Get up",
+      "confidence": 0.7611313222747325,
+      "current": "Get up",
+      "stability": 4
+    },
+    {
+      "frame": 10,
+      "label": "Get up",
+      "confidence": 0.834300270578762,
+      "current": "Get up",
+      "stability": 5
+    },
+    {
+      "frame": 11,
+      "label": "Get up",
+      "confidence": 0.7856456716273077,
+      "current": "Get up",
+      "stability": 6
+    },
+    {
+      "frame": 12,
+      "label": "Get up",
+      "confidence": 0.8183948975365483,
+      "current": "Get up",
+      "stability": 7
+    },
+    {
+      "frame": 13,
+      "label": "Get up",
+      "confidence": 0.756542258137011,
+      "current": "Get up",
+      "stability": 8
+    },
+    {
+      "frame": 14,
+      "label": "Get up",
+      "confidence": 0.7706169108100647,
+      "current": "Get up",
+      "stability": 9
+    },
+    {
+      "frame": 15,
+      "label": "Get up",
+      "confidence": 0.8044379073587364,
+      "current": "Get up",
+      "stability": 10
+    },
+    {
+      "frame": 16,
+      "label": "Get up",
+      "confidence": 0.7387855420096967,
+      "current": "Get up",
+      "stability": 11
+    },
+    {
+      "frame": 17,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 12
+    },
+    {
+      "frame": 18,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 13
+    },
+    {
+      "frame": 19,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 14
+    },
+    {
+      "frame": 20,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 15
+    },
+    {
+      "frame": 21,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 16
+    },
+    {
+      "frame": 22,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 17
+    },
+    {
+      "frame": 23,
+      "label": "Get up",
+      "confidence": 0.7402165268353551,
+      "current": "Get up",
+      "stability": 18
+    },
+    {
+      "frame": 24,
+      "label": "Get up",
+      "confidence": 0.7466705554649888,
+      "current": "Get up",
+      "stability": 19
+    },
+    {
+      "frame": 25,
+      "label": "Get up",
+      "confidence": 0.8522029052795258,
+      "current": "Get up",
+      "stability": 20
+    },
+    {
+      "frame": 26,
+      "label": "Get up",
+      "confidence": 0.8824053384992568,
+      "current": "Get up",
+      "stability": 21
+    },
+    {
+      "frame": 27,
+      "label": "Get up",
+      "confidence": 0.8427334170827052,
+      "current": "Get up",
+      "stability": 22
+    },
+    {
+      "frame": 28,
+      "label": "Get up",
+      "confidence": 0.7321024248401158,
+      "current": "Get up",
+      "stability": 23
+    },
+    {
+      "frame": 29,
+      "label": "Get up",
+      "confidence": 0.767508297726594,
+      "current": "Get up",
+      "stability": 24
+    },
+    {
+      "frame": 30,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 25
+    },
+    {
+      "frame": 31,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 26
+    },
+    {
+      "frame": 32,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 27
+    },
+    {
+      "frame": 33,
+      "label": "Get up",
+      "confidence": 0.8678402321842813,
+      "current": "Get up",
+      "stability": 28
+    },
+    {
+      "frame": 34,
+      "label": "Get up",
+      "confidence": 0.5929612274490399,
+      "current": "Get up",
+      "stability": 29
+    },
+    {
+      "frame": 35,
+      "label": "Walk forward",
+      "confidence": 0.744265104567267,
+      "current": "Walk forward",
+      "stability": 1
+    },
+    {
+      "frame": 36,
+      "label": "Walk backward",
+      "confidence": 0.5313803215913916,
+      "current": "Get up",
+      "stability": 1
+    },
+    {
+      "frame": 37,
+      "label": "Walk backward",
+      "confidence": 0.6021673934197657,
+      "current": "Walk backward",
+      "stability": 1
+    },
+    {
+      "frame": 38,
+      "label": "Walk backward",
+      "confidence": 0.7344755642072526,
+      "current": "Walk backward",
+      "stability": 2
+    },
+    {
+      "frame": 39,
+      "label": "Walk forward",
+      "confidence": 0.5050272553121128,
+      "current": "Walk backward",
+      "stability": 3
+    },
+    {
+      "frame": 40,
+      "label": "Walk backward",
+      "confidence": 0.7585364107660808,
+      "current": "Walk backward",
+      "stability": 4
+    },
+    {
+      "frame": 41,
+      "label": "Walk backward",
+      "confidence": 0.912327613847175,
+      "current": "Walk backward",
+      "stability": 5
+    },
+    {
+      "frame": 42,
+      "label": "Walk backward",
+      "confidence": 0.9347089708692943,
+      "current": "Walk backward",
+      "stability": 6
+    },
+    {
+      "frame": 43,
+      "label": "Walk forward",
+      "confidence": 0.7522924281090521,
+      "current": "Walk forward",
+      "stability": 1
+    },
+    {
+      "frame": 44,
+      "label": "Walk forward",
+      "confidence": 0.7626726063372735,
+      "current": "Walk forward",
+      "stability": 2
+    },
+    {
+      "frame": 45,
+      "label": "Walk forward",
+      "confidence": 0.7025115684840221,
+      "current": "Walk forward",
+      "stability": 3
+    },
+    {
+      "frame": 46,
+      "label": "Walk forward",
+      "confidence": 0.9283324221885444,
+      "current": "Walk forward",
+      "stability": 4
+    },
+    {
+      "frame": 47,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 5
+    },
+    {
+      "frame": 48,
+      "label": "Walk forward",
+      "confidence": 0.7014675870590782,
+      "current": "Walk forward",
+      "stability": 6
+    },
+    {
+      "frame": 49,
+      "label": "Walk forward",
+      "confidence": 0.7615401168404387,
+      "current": "Walk forward",
+      "stability": 7
+    },
+    {
+      "frame": 50,
+      "label": "Walk forward",
+      "confidence": 0.828242549743186,
+      "current": "Walk forward",
+      "stability": 8
+    },
+    {
+      "frame": 51,
+      "label": "Walk forward",
+      "confidence": 0.7038612666637544,
+      "current": "Walk forward",
+      "stability": 9
+    },
+    {
+      "frame": 52,
+      "label": "Walk forward",
+      "confidence": 0.7000914694946881,
+      "current": "Walk forward",
+      "stability": 10
+    },
+    {
+      "frame": 53,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 11
+    },
+    {
+      "frame": 54,
+      "label": "Walk forward",
+      "confidence": 0.9549002577370591,
+      "current": "Walk forward",
+      "stability": 12
+    },
+    {
+      "frame": 55,
+      "label": "Walk forward",
+      "confidence": 0.7508779706173464,
+      "current": "Walk forward",
+      "stability": 13
+    },
+    {
+      "frame": 56,
+      "label": "Walk forward",
+      "confidence": 0.8063396940632434,
+      "current": "Walk forward",
+      "stability": 14
+    },
+    {
+      "frame": 57,
+      "label": "Walk backward",
+      "confidence": 0.5059941228230092,
+      "current": "Walk forward",
+      "stability": 15
+    },
+    {
+      "frame": 58,
+      "label": "Walk forward",
+      "confidence": 0.6476946668739247,
+      "current": "Walk forward",
+      "stability": 16
+    },
+    {
+      "frame": 59,
+      "label": "Walk backward",
+      "confidence": 0.5050085306815933,
+      "current": "Walk forward",
+      "stability": 17
+    },
+    {
+      "frame": 60,
+      "label": "Walk forward",
+      "confidence": 0.6132306671972998,
+      "current": "Walk forward",
+      "stability": 18
+    },
+    {
+      "frame": 61,
+      "label": "Walk forward",
+      "confidence": 0.786556784146171,
+      "current": "Walk forward",
+      "stability": 19
+    },
+    {
+      "frame": 62,
+      "label": "Walk forward",
+      "confidence": 0.8360432769764871,
+      "current": "Walk forward",
+      "stability": 20
+    },
+    {
+      "frame": 63,
+      "label": "Walk forward",
+      "confidence": 0.8002878101902953,
+      "current": "Walk forward",
+      "stability": 21
+    },
+    {
+      "frame": 64,
+      "label": "Walk forward",
+      "confidence": 0.7739947395100586,
+      "current": "Walk forward",
+      "stability": 22
+    },
+    {
+      "frame": 65,
+      "label": "Walk forward",
+      "confidence": 0.7941780922513892,
+      "current": "Walk forward",
+      "stability": 23
+    },
+    {
+      "frame": 66,
+      "label": "Walk forward",
+      "confidence": 0.7284872005412238,
+      "current": "Walk forward",
+      "stability": 24
+    },
+    {
+      "frame": 67,
+      "label": "Walk forward",
+      "confidence": 0.889886156819949,
+      "current": "Walk forward",
+      "stability": 25
+    },
+    {
+      "frame": 68,
+      "label": "Walk forward",
+      "confidence": 0.8896127174233418,
+      "current": "Walk forward",
+      "stability": 26
+    },
+    {
+      "frame": 69,
+      "label": "Walk forward",
+      "confidence": 0.8473798672259761,
+      "current": "Walk forward",
+      "stability": 27
+    },
+    {
+      "frame": 70,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 28
+    },
+    {
+      "frame": 71,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 29
+    },
+    {
+      "frame": 72,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 30
+    },
+    {
+      "frame": 73,
+      "label": "Walk forward",
+      "confidence": 0.8344123807412573,
+      "current": "Walk forward",
+      "stability": 31
+    },
+    {
+      "frame": 74,
+      "label": "Walk forward",
+      "confidence": 0.8701514326951716,
+      "current": "Walk forward",
+      "stability": 32
+    },
+    {
+      "frame": 75,
+      "label": "Walk forward",
+      "confidence": 0.8771131515747786,
+      "current": "Walk forward",
+      "stability": 33
+    },
+    {
+      "frame": 76,
+      "label": "Walk forward",
+      "confidence": 0.6113529144288248,
+      "current": "Walk forward",
+      "stability": 34
+    },
+    {
+      "frame": 77,
+      "label": "Walk forward",
+      "confidence": 0.725398215313268,
+      "current": "Walk forward",
+      "stability": 35
+    },
+    {
+      "frame": 78,
+      "label": "Walk forward",
+      "confidence": 0.7942105452199663,
+      "current": "Walk forward",
+      "stability": 36
+    },
+    {
+      "frame": 79,
+      "label": "Walk forward",
+      "confidence": 0.9632894501739147,
+      "current": "Walk forward",
+      "stability": 37
+    },
+    {
+      "frame": 80,
+      "label": "Walk forward",
+      "confidence": 0.9886269662331084,
+      "current": "Walk forward",
+      "stability": 38
+    },
+    {
+      "frame": 81,
+      "label": "Walk forward",
+      "confidence": 0.7416052447883891,
+      "current": "Walk forward",
+      "stability": 39
+    },
+    {
+      "frame": 82,
+      "label": "Walk forward",
+      "confidence": 0.8235691462384638,
+      "current": "Walk forward",
+      "stability": 40
+    },
+    {
+      "frame": 83,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 41
+    },
+    {
+      "frame": 84,
+      "label": "Walk forward",
+      "confidence": 0.8352606003439925,
+      "current": "Walk forward",
+      "stability": 42
+    },
+    {
+      "frame": 85,
+      "label": "Walk forward",
+      "confidence": 0.9220591100373879,
+      "current": "Walk forward",
+      "stability": 43
+    },
+    {
+      "frame": 86,
+      "label": "Walk forward",
+      "confidence": 0.8878940305039775,
+      "current": "Walk forward",
+      "stability": 44
+    },
+    {
+      "frame": 87,
+      "label": "Walk forward",
+      "confidence": 0.8820469654951782,
+      "current": "Walk forward",
+      "stability": 45
+    },
+    {
+      "frame": 88,
+      "label": "Walk forward",
+      "confidence": 0.8290069380428357,
+      "current": "Walk forward",
+      "stability": 46
+    },
+    {
+      "frame": 89,
+      "label": "Walk forward",
+      "confidence": 0.761754671347483,
+      "current": "Walk forward",
+      "stability": 47
+    },
+    {
+      "frame": 90,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 48
+    },
+    {
+      "frame": 91,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 49
+    },
+    {
+      "frame": 92,
+      "label": "Walk forward",
+      "confidence": 0.8205265163199178,
+      "current": "Walk forward",
+      "stability": 50
+    },
+    {
+      "frame": 93,
+      "label": "Walk backward",
+      "confidence": 0.5828196382698843,
+      "current": "Walk backward",
+      "stability": 1
+    },
+    {
+      "frame": 94,
+      "label": "Walk backward",
+      "confidence": 0.6754993149684994,
+      "current": "Walk backward",
+      "stability": 2
+    },
+    {
+      "frame": 95,
+      "label": "Walk forward",
+      "confidence": 0.5144114554330603,
+      "current": "Walk forward",
+      "stability": 1
+    },
+    {
+      "frame": 96,
+      "label": "Walk forward",
+      "confidence": 0.6327356031165814,
+      "current": "Walk forward",
+      "stability": 2
+    },
+    {
+      "frame": 97,
+      "label": "Walk forward",
+      "confidence": 0.691819490756665,
+      "current": "Walk forward",
+      "stability": 3
+    },
+    {
+      "frame": 98,
+      "label": "Walk forward",
+      "confidence": 0.7535510153536907,
+      "current": "Walk forward",
+      "stability": 4
+    },
+    {
+      "frame": 99,
+      "label": "Walk forward",
+      "confidence": 0.7801383786679004,
+      "current": "Walk forward",
+      "stability": 5
+    },
+    {
+      "frame": 100,
+      "label": "Walk forward",
+      "confidence": 0.7698095765431385,
+      "current": "Walk forward",
+      "stability": 6
+    },
+    {
+      "frame": 101,
+      "label": "Walk forward",
+      "confidence": 0.9064511522369334,
+      "current": "Walk forward",
+      "stability": 7
+    },
+    {
+      "frame": 102,
+      "label": "Walk forward",
+      "confidence": 0.9247952607801124,
+      "current": "Walk forward",
+      "stability": 8
+    },
+    {
+      "frame": 103,
+      "label": "Walk forward",
+      "confidence": 0.8957769455772044,
+      "current": "Walk forward",
+      "stability": 9
+    },
+    {
+      "frame": 104,
+      "label": "Walk forward",
+      "confidence": 0.7901428713690928,
+      "current": "Walk forward",
+      "stability": 10
+    },
+    {
+      "frame": 105,
+      "label": "Walk forward",
+      "confidence": 0.8821611821290612,
+      "current": "Walk forward",
+      "stability": 11
+    },
+    {
+      "frame": 106,
+      "label": "Walk forward",
+      "confidence": 0.9352340802039306,
+      "current": "Walk forward",
+      "stability": 12
+    },
+    {
+      "frame": 107,
+      "label": "Walk forward",
+      "confidence": 0.927885249065964,
+      "current": "Walk forward",
+      "stability": 13
+    },
+    {
+      "frame": 108,
+      "label": "Walk forward",
+      "confidence": 0.8108373025251361,
+      "current": "Walk forward",
+      "stability": 14
+    },
+    {
+      "frame": 109,
+      "label": "Walk forward",
+      "confidence": 0.7230296901636579,
+      "current": "Walk forward",
+      "stability": 15
+    },
+    {
+      "frame": 110,
+      "label": "Walk forward",
+      "confidence": 0.7866268944048289,
+      "current": "Walk forward",
+      "stability": 16
+    },
+    {
+      "frame": 111,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 17
+    },
+    {
+      "frame": 112,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 18
+    },
+    {
+      "frame": 113,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 19
+    },
+    {
+      "frame": 114,
+      "label": "Walk forward",
+      "confidence": 0.9244260224834625,
+      "current": "Walk forward",
+      "stability": 20
+    },
+    {
+      "frame": 115,
+      "label": "Walk forward",
+      "confidence": 0.9647431209856446,
+      "current": "Walk forward",
+      "stability": 21
+    },
+    {
+      "frame": 116,
+      "label": "Walk forward",
+      "confidence": 0.7813463721908751,
+      "current": "Walk forward",
+      "stability": 22
+    },
+    {
+      "frame": 117,
+      "label": "Walk forward",
+      "confidence": 0.7928373937253912,
+      "current": "Walk forward",
+      "stability": 23
+    },
+    {
+      "frame": 118,
+      "label": "Walk forward",
+      "confidence": 0.7543153938486422,
+      "current": "Walk forward",
+      "stability": 24
+    },
+    {
+      "frame": 119,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 25
+    },
+    {
+      "frame": 120,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 26
+    },
+    {
+      "frame": 121,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 27
+    },
+    {
+      "frame": 122,
+      "label": "Walk forward",
+      "confidence": 0.8171745581083094,
+      "current": "Walk forward",
+      "stability": 28
+    },
+    {
+      "frame": 123,
+      "label": "Walk forward",
+      "confidence": 0.8624300341143553,
+      "current": "Walk forward",
+      "stability": 29
+    },
+    {
+      "frame": 124,
+      "label": "Walk forward",
+      "confidence": 0.886153910783075,
+      "current": "Walk forward",
+      "stability": 30
+    },
+    {
+      "frame": 125,
+      "label": "Turn",
+      "confidence": 0.5933272055744386,
+      "current": "Turn",
+      "stability": 1
+    },
+    {
+      "frame": 126,
+      "label": "Turn",
+      "confidence": 0.7999576292978553,
+      "current": "Turn",
+      "stability": 2
+    },
+    {
+      "frame": 127,
+      "label": "Turn",
+      "confidence": 0.8327004425971848,
+      "current": "Turn",
+      "stability": 3
+    },
+    {
+      "frame": 128,
+      "label": "Turn",
+      "confidence": 0.8989286058837591,
+      "current": "Turn",
+      "stability": 4
+    },
+    {
+      "frame": 129,
+      "label": "Turn",
+      "confidence": 0.8996503902135822,
+      "current": "Turn",
+      "stability": 5
+    },
+    {
+      "frame": 130,
+      "label": "Turn",
+      "confidence": 0.99,
+      "current": "Turn",
+      "stability": 6
+    },
+    {
+      "frame": 131,
+      "label": "Turn",
+      "confidence": 0.99,
+      "current": "Turn",
+      "stability": 7
+    },
+    {
+      "frame": 132,
+      "label": "Turn",
+      "confidence": 0.8428557798294353,
+      "current": "Turn",
+      "stability": 8
+    },
+    {
+      "frame": 133,
+      "label": "Turn",
+      "confidence": 0.99,
+      "current": "Turn",
+      "stability": 9
+    },
+    {
+      "frame": 134,
+      "label": "Turn",
+      "confidence": 0.99,
+      "current": "Turn",
+      "stability": 10
+    },
+    {
+      "frame": 135,
+      "label": "Turn",
+      "confidence": 0.9251609251340662,
+      "current": "Turn",
+      "stability": 11
+    },
+    {
+      "frame": 136,
+      "label": "Turn",
+      "confidence": 0.91679512960843,
+      "current": "Turn",
+      "stability": 12
+    },
+    {
+      "frame": 137,
+      "label": "Turn",
+      "confidence": 0.9382757651872302,
+      "current": "Turn",
+      "stability": 13
+    },
+    {
+      "frame": 138,
+      "label": "Turn",
+      "confidence": 0.9628211723503655,
+      "current": "Turn",
+      "stability": 14
+    },
+    {
+      "frame": 139,
+      "label": "Turn",
+      "confidence": 0.9706533120626029,
+      "current": "Turn",
+      "stability": 15
+    },
+    {
+      "frame": 140,
+      "label": "Turn",
+      "confidence": 0.9206619461227509,
+      "current": "Turn",
+      "stability": 16
+    },
+    {
+      "frame": 141,
+      "label": "Turn",
+      "confidence": 0.8947474367552288,
+      "current": "Turn",
+      "stability": 17
+    },
+    {
+      "frame": 142,
+      "label": "Turn",
+      "confidence": 0.9700380488187502,
+      "current": "Turn",
+      "stability": 18
+    },
+    {
+      "frame": 143,
+      "label": "Turn",
+      "confidence": 0.9615884763547939,
+      "current": "Turn",
+      "stability": 19
+    },
+    {
+      "frame": 144,
+      "label": "Turn",
+      "confidence": 0.9731004291644803,
+      "current": "Turn",
+      "stability": 20
+    },
+    {
+      "frame": 145,
+      "label": "Turn",
+      "confidence": 0.9930876333375805,
+      "current": "Turn",
+      "stability": 21
+    },
+    {
+      "frame": 146,
+      "label": "Turn",
+      "confidence": 0.9489038550169737,
+      "current": "Turn",
+      "stability": 22
+    },
+    {
+      "frame": 147,
+      "label": "Turn",
+      "confidence": 0.9490657217590405,
+      "current": "Turn",
+      "stability": 23
+    },
+    {
+      "frame": 148,
+      "label": "Turn",
+      "confidence": 0.9610508829426262,
+      "current": "Turn",
+      "stability": 24
+    },
+    {
+      "frame": 149,
+      "label": "Turn",
+      "confidence": 0.9252549130809194,
+      "current": "Turn",
+      "stability": 25
+    },
+    {
+      "frame": 150,
+      "label": "Turn",
+      "confidence": 0.939349991326244,
+      "current": "Turn",
+      "stability": 26
+    },
+    {
+      "frame": 151,
+      "label": "Turn",
+      "confidence": 0.845590005596934,
+      "current": "Turn",
+      "stability": 27
+    },
+    {
+      "frame": 152,
+      "label": "Turn",
+      "confidence": 0.8121802849271949,
+      "current": "Turn",
+      "stability": 28
+    },
+    {
+      "frame": 153,
+      "label": "Turn",
+      "confidence": 0.835905385557245,
+      "current": "Turn",
+      "stability": 29
+    },
+    {
+      "frame": 154,
+      "label": "Turn",
+      "confidence": 0.8662895640986435,
+      "current": "Turn",
+      "stability": 30
+    },
+    {
+      "frame": 155,
+      "label": "Turn",
+      "confidence": 0.7652539914739118,
+      "current": "Turn",
+      "stability": 31
+    },
+    {
+      "frame": 156,
+      "label": "Turn",
+      "confidence": 0.8690549879811991,
+      "current": "Turn",
+      "stability": 32
+    },
+    {
+      "frame": 157,
+      "label": "Turn",
+      "confidence": 0.756937139382074,
+      "current": "Turn",
+      "stability": 33
+    },
+    {
+      "frame": 158,
+      "label": "Turn",
+      "confidence": 0.99,
+      "current": "Turn",
+      "stability": 34
+    },
+    {
+      "frame": 159,
+      "label": "Turn",
+      "confidence": 0.99,
+      "current": "Turn",
+      "stability": 35
+    },
+    {
+      "frame": 160,
+      "label": "Turn",
+      "confidence": 0.99,
+      "current": "Turn",
+      "stability": 36
+    },
+    {
+      "frame": 161,
+      "label": "Turn",
+      "confidence": 0.8359570287770063,
+      "current": "Turn",
+      "stability": 37
+    },
+    {
+      "frame": 162,
+      "label": "Turn",
+      "confidence": 0.5998652931274941,
+      "current": "Turn",
+      "stability": 38
+    },
+    {
+      "frame": 163,
+      "label": "Walk backward",
+      "confidence": 0.6416864629658652,
+      "current": "Walk backward",
+      "stability": 1
+    },
+    {
+      "frame": 164,
+      "label": "Walk backward",
+      "confidence": 0.8910305806441242,
+      "current": "Walk backward",
+      "stability": 2
+    },
+    {
+      "frame": 165,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 3
+    },
+    {
+      "frame": 166,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 4
+    },
+    {
+      "frame": 167,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 5
+    },
+    {
+      "frame": 168,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 6
+    },
+    {
+      "frame": 169,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 7
+    },
+    {
+      "frame": 170,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 8
+    },
+    {
+      "frame": 171,
+      "label": "Walk backward",
+      "confidence": 0.7763017676012562,
+      "current": "Walk backward",
+      "stability": 9
+    },
+    {
+      "frame": 172,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 10
+    },
+    {
+      "frame": 173,
+      "label": "Walk backward",
+      "confidence": 0.8801122785284725,
+      "current": "Walk backward",
+      "stability": 11
+    },
+    {
+      "frame": 174,
+      "label": "Walk backward",
+      "confidence": 0.9046376195264572,
+      "current": "Walk backward",
+      "stability": 12
+    },
+    {
+      "frame": 175,
+      "label": "Walk backward",
+      "confidence": 0.8081770078005583,
+      "current": "Walk backward",
+      "stability": 13
+    },
+    {
+      "frame": 176,
+      "label": "Walk backward",
+      "confidence": 0.8153728694343162,
+      "current": "Walk backward",
+      "stability": 14
+    },
+    {
+      "frame": 177,
+      "label": "Walk backward",
+      "confidence": 0.7027764156909444,
+      "current": "Walk backward",
+      "stability": 15
+    },
+    {
+      "frame": 178,
+      "label": "Walk backward",
+      "confidence": 0.7950091837303291,
+      "current": "Walk backward",
+      "stability": 16
+    },
+    {
+      "frame": 179,
+      "label": "Walk backward",
+      "confidence": 0.8023561775598906,
+      "current": "Walk backward",
+      "stability": 17
+    },
+    {
+      "frame": 180,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 18
+    },
+    {
+      "frame": 181,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 19
+    },
+    {
+      "frame": 182,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 20
+    },
+    {
+      "frame": 183,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 21
+    },
+    {
+      "frame": 184,
+      "label": "Walk backward",
+      "confidence": 0.7378551087903751,
+      "current": "Walk backward",
+      "stability": 22
+    },
+    {
+      "frame": 185,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 23
+    },
+    {
+      "frame": 186,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 24
+    },
+    {
+      "frame": 187,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 25
+    },
+    {
+      "frame": 188,
+      "label": "Walk backward",
+      "confidence": 0.7420621695769053,
+      "current": "Walk backward",
+      "stability": 26
+    },
+    {
+      "frame": 189,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 27
+    },
+    {
+      "frame": 190,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 28
+    },
+    {
+      "frame": 191,
+      "label": "Walk backward",
+      "confidence": 0.8024253407148224,
+      "current": "Walk backward",
+      "stability": 29
+    },
+    {
+      "frame": 192,
+      "label": "Walk backward",
+      "confidence": 0.831460626710629,
+      "current": "Walk backward",
+      "stability": 30
+    },
+    {
+      "frame": 193,
+      "label": "Walk backward",
+      "confidence": 0.853453347432594,
+      "current": "Walk backward",
+      "stability": 31
+    },
+    {
+      "frame": 194,
+      "label": "Walk backward",
+      "confidence": 0.7877658299475914,
+      "current": "Walk backward",
+      "stability": 32
+    },
+    {
+      "frame": 195,
+      "label": "Walk backward",
+      "confidence": 0.7310128690306253,
+      "current": "Walk backward",
+      "stability": 33
+    },
+    {
+      "frame": 196,
+      "label": "Walk backward",
+      "confidence": 0.7236506561002042,
+      "current": "Walk backward",
+      "stability": 34
+    },
+    {
+      "frame": 197,
+      "label": "Walk backward",
+      "confidence": 0.8008172274981631,
+      "current": "Walk backward",
+      "stability": 35
+    },
+    {
+      "frame": 198,
+      "label": "Walk backward",
+      "confidence": 0.7962122642730801,
+      "current": "Walk backward",
+      "stability": 36
+    },
+    {
+      "frame": 199,
+      "label": "Walk backward",
+      "confidence": 0.7588076302394262,
+      "current": "Walk backward",
+      "stability": 37
+    },
+    {
+      "frame": 200,
+      "label": "Walk backward",
+      "confidence": 0.7448776210299696,
+      "current": "Walk backward",
+      "stability": 38
+    },
+    {
+      "frame": 201,
+      "label": "Walk backward",
+      "confidence": 0.7151027031355202,
+      "current": "Walk backward",
+      "stability": 39
+    },
+    {
+      "frame": 202,
+      "label": "Walk backward",
+      "confidence": 0.7188942394502129,
+      "current": "Walk backward",
+      "stability": 40
+    },
+    {
+      "frame": 203,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 41
+    },
+    {
+      "frame": 204,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 42
+    },
+    {
+      "frame": 205,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 43
+    },
+    {
+      "frame": 206,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 44
+    },
+    {
+      "frame": 207,
+      "label": "Walk backward",
+      "confidence": 0.7773757300247359,
+      "current": "Walk backward",
+      "stability": 45
+    },
+    {
+      "frame": 208,
+      "label": "Walk backward",
+      "confidence": 0.8558749648168436,
+      "current": "Walk backward",
+      "stability": 46
+    },
+    {
+      "frame": 209,
+      "label": "Walk backward",
+      "confidence": 0.8314124976980234,
+      "current": "Walk backward",
+      "stability": 47
+    },
+    {
+      "frame": 210,
+      "label": "Walk backward",
+      "confidence": 0.7983100363512259,
+      "current": "Walk backward",
+      "stability": 48
+    },
+    {
+      "frame": 211,
+      "label": "Walk backward",
+      "confidence": 0.8072139338651858,
+      "current": "Walk backward",
+      "stability": 49
+    },
+    {
+      "frame": 212,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 50
+    },
+    {
+      "frame": 213,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 51
+    },
+    {
+      "frame": 214,
+      "label": "Walk backward",
+      "confidence": 0.8043807314367022,
+      "current": "Walk backward",
+      "stability": 52
+    },
+    {
+      "frame": 215,
+      "label": "Walk backward",
+      "confidence": 0.7438705426699026,
+      "current": "Walk backward",
+      "stability": 53
+    },
+    {
+      "frame": 216,
+      "label": "Walk backward",
+      "confidence": 0.8011031749544297,
+      "current": "Walk backward",
+      "stability": 54
+    },
+    {
+      "frame": 217,
+      "label": "Walk backward",
+      "confidence": 0.852648498013158,
+      "current": "Walk backward",
+      "stability": 55
+    },
+    {
+      "frame": 218,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 56
+    },
+    {
+      "frame": 219,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 57
+    },
+    {
+      "frame": 220,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 58
+    },
+    {
+      "frame": 221,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 59
+    },
+    {
+      "frame": 222,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 60
+    },
+    {
+      "frame": 223,
+      "label": "Walk backward",
+      "confidence": 0.710375684801612,
+      "current": "Walk backward",
+      "stability": 61
+    },
+    {
+      "frame": 224,
+      "label": "Walk backward",
+      "confidence": 0.8613069153147902,
+      "current": "Walk backward",
+      "stability": 62
+    },
+    {
+      "frame": 225,
+      "label": "Walk backward",
+      "confidence": 0.6536314921911438,
+      "current": "Walk backward",
+      "stability": 63
+    },
+    {
+      "frame": 226,
+      "label": "Walk backward",
+      "confidence": 0.7524021211843052,
+      "current": "Walk backward",
+      "stability": 64
+    },
+    {
+      "frame": 227,
+      "label": "Walk backward",
+      "confidence": 0.8058495791157974,
+      "current": "Walk backward",
+      "stability": 65
+    },
+    {
+      "frame": 228,
+      "label": "Walk backward",
+      "confidence": 0.8477664158785523,
+      "current": "Walk backward",
+      "stability": 66
+    },
+    {
+      "frame": 229,
+      "label": "Walk backward",
+      "confidence": 0.8710604343408516,
+      "current": "Walk backward",
+      "stability": 67
+    },
+    {
+      "frame": 230,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 68
+    },
+    {
+      "frame": 231,
+      "label": "Walk backward",
+      "confidence": 0.99,
+      "current": "Walk backward",
+      "stability": 69
+    },
+    {
+      "frame": 232,
+      "label": "Walk backward",
+      "confidence": 0.7753335170823881,
+      "current": "Walk backward",
+      "stability": 70
+    },
+    {
+      "frame": 233,
+      "label": "Turn",
+      "confidence": 0.708313221448696,
+      "current": "Turn",
+      "stability": 1
+    },
+    {
+      "frame": 234,
+      "label": "Turn",
+      "confidence": 0.7315530456077564,
+      "current": "Turn",
+      "stability": 2
+    },
+    {
+      "frame": 235,
+      "label": "Turn",
+      "confidence": 0.9004878427724762,
+      "current": "Turn",
+      "stability": 3
+    },
+    {
+      "frame": 236,
+      "label": "Turn",
+      "confidence": 0.7086776600526123,
+      "current": "Turn",
+      "stability": 4
+    },
+    {
+      "frame": 237,
+      "label": "Turn",
+      "confidence": 0.99,
+      "current": "Turn",
+      "stability": 5
+    },
+    {
+      "frame": 238,
+      "label": "Turn",
+      "confidence": 0.8743384210003032,
+      "current": "Turn",
+      "stability": 6
+    },
+    {
+      "frame": 239,
+      "label": "Turn",
+      "confidence": 0.8676877391790292,
+      "current": "Turn",
+      "stability": 7
+    },
+    {
+      "frame": 240,
+      "label": "Turn",
+      "confidence": 0.8732328483937674,
+      "current": "Turn",
+      "stability": 8
+    },
+    {
+      "frame": 241,
+      "label": "Turn",
+      "confidence": 0.9365307389202557,
+      "current": "Turn",
+      "stability": 9
+    },
+    {
+      "frame": 242,
+      "label": "Turn",
+      "confidence": 0.9068528052540742,
+      "current": "Turn",
+      "stability": 10
+    },
+    {
+      "frame": 243,
+      "label": "Turn",
+      "confidence": 0.9721542006970878,
+      "current": "Turn",
+      "stability": 11
+    },
+    {
+      "frame": 244,
+      "label": "Turn",
+      "confidence": 0.9761604818554965,
+      "current": "Turn",
+      "stability": 12
+    },
+    {
+      "frame": 245,
+      "label": "Turn",
+      "confidence": 0.8429123569041118,
+      "current": "Turn",
+      "stability": 13
+    },
+    {
+      "frame": 246,
+      "label": "Turn",
+      "confidence": 0.9471986102431914,
+      "current": "Turn",
+      "stability": 14
+    },
+    {
+      "frame": 247,
+      "label": "Turn",
+      "confidence": 0.9881717866607435,
+      "current": "Turn",
+      "stability": 15
+    },
+    {
+      "frame": 248,
+      "label": "Turn",
+      "confidence": 0.8664798841796003,
+      "current": "Turn",
+      "stability": 16
+    },
+    {
+      "frame": 249,
+      "label": "Turn",
+      "confidence": 0.9689946918185357,
+      "current": "Turn",
+      "stability": 17
+    },
+    {
+      "frame": 250,
+      "label": "Turn",
+      "confidence": 0.9676233017426025,
+      "current": "Turn",
+      "stability": 18
+    },
+    {
+      "frame": 251,
+      "label": "Turn",
+      "confidence": 0.9124637589969141,
+      "current": "Turn",
+      "stability": 19
+    },
+    {
+      "frame": 252,
+      "label": "Turn",
+      "confidence": 0.7151718547302243,
+      "current": "Turn",
+      "stability": 20
+    },
+    {
+      "frame": 253,
+      "label": "Turn",
+      "confidence": 0.7748847004574603,
+      "current": "Turn",
+      "stability": 21
+    },
+    {
+      "frame": 254,
+      "label": "Turn",
+      "confidence": 0.8421099737959479,
+      "current": "Turn",
+      "stability": 22
+    },
+    {
+      "frame": 255,
+      "label": "Turn",
+      "confidence": 0.8892375317463439,
+      "current": "Turn",
+      "stability": 23
+    },
+    {
+      "frame": 256,
+      "label": "Turn",
+      "confidence": 0.8436262540009948,
+      "current": "Turn",
+      "stability": 24
+    },
+    {
+      "frame": 257,
+      "label": "Turn",
+      "confidence": 0.8705435048157893,
+      "current": "Turn",
+      "stability": 25
+    },
+    {
+      "frame": 258,
+      "label": "Turn",
+      "confidence": 0.8301909037636592,
+      "current": "Turn",
+      "stability": 26
+    },
+    {
+      "frame": 259,
+      "label": "Turn",
+      "confidence": 0.905174287124969,
+      "current": "Turn",
+      "stability": 27
+    },
+    {
+      "frame": 260,
+      "label": "Turn",
+      "confidence": 0.8379587120910866,
+      "current": "Turn",
+      "stability": 28
+    },
+    {
+      "frame": 261,
+      "label": "Turn",
+      "confidence": 0.99,
+      "current": "Turn",
+      "stability": 29
+    },
+    {
+      "frame": 262,
+      "label": "Turn",
+      "confidence": 0.7436467367689781,
+      "current": "Turn",
+      "stability": 30
+    },
+    {
+      "frame": 263,
+      "label": "Turn",
+      "confidence": 0.99,
+      "current": "Turn",
+      "stability": 31
+    },
+    {
+      "frame": 264,
+      "label": "Turn",
+      "confidence": 0.99,
+      "current": "Turn",
+      "stability": 32
+    },
+    {
+      "frame": 265,
+      "label": "Turn",
+      "confidence": 0.8910889492694393,
+      "current": "Turn",
+      "stability": 33
+    },
+    {
+      "frame": 266,
+      "label": "Turn",
+      "confidence": 0.7067176938883725,
+      "current": "Turn",
+      "stability": 34
+    },
+    {
+      "frame": 267,
+      "label": "Turn",
+      "confidence": 0.7397276096493425,
+      "current": "Turn",
+      "stability": 35
+    },
+    {
+      "frame": 268,
+      "label": "Turn",
+      "confidence": 0.5247953098387971,
+      "current": "Turn",
+      "stability": 36
+    },
+    {
+      "frame": 269,
+      "label": "Sit down",
+      "confidence": 0.643888696934737,
+      "current": "Sit down",
+      "stability": 1
+    },
+    {
+      "frame": 270,
+      "label": "Sit down",
+      "confidence": 0.8593352283947986,
+      "current": "Sit down",
+      "stability": 2
+    },
+    {
+      "frame": 271,
+      "label": "Sit down",
+      "confidence": 0.9180027958290595,
+      "current": "Sit down",
+      "stability": 3
+    },
+    {
+      "frame": 272,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 4
+    },
+    {
+      "frame": 273,
+      "label": "Sit down",
+      "confidence": 0.7260113173610172,
+      "current": "Sit down",
+      "stability": 5
+    },
+    {
+      "frame": 274,
+      "label": "Sit down",
+      "confidence": 0.8587733453534977,
+      "current": "Sit down",
+      "stability": 6
+    },
+    {
+      "frame": 275,
+      "label": "Sit down",
+      "confidence": 0.7972337722384235,
+      "current": "Sit down",
+      "stability": 7
+    },
+    {
+      "frame": 276,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 8
+    },
+    {
+      "frame": 277,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 9
+    },
+    {
+      "frame": 278,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 10
+    },
+    {
+      "frame": 279,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 11
+    },
+    {
+      "frame": 280,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 12
+    },
+    {
+      "frame": 281,
+      "label": "Sit down",
+      "confidence": 0.7308124698160547,
+      "current": "Sit down",
+      "stability": 13
+    },
+    {
+      "frame": 282,
+      "label": "Sit down",
+      "confidence": 0.8301591656474252,
+      "current": "Sit down",
+      "stability": 14
+    },
+    {
+      "frame": 283,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 15
+    },
+    {
+      "frame": 284,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 16
+    },
+    {
+      "frame": 285,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 17
+    },
+    {
+      "frame": 286,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 18
+    },
+    {
+      "frame": 287,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 19
+    },
+    {
+      "frame": 288,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 20
+    },
+    {
+      "frame": 289,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 21
+    },
+    {
+      "frame": 290,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 22
+    },
+    {
+      "frame": 291,
+      "label": "Sit down",
+      "confidence": 0.7187260385113945,
+      "current": "Sit down",
+      "stability": 23
+    },
+    {
+      "frame": 292,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 24
+    },
+    {
+      "frame": 293,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 25
+    },
+    {
+      "frame": 294,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 26
+    },
+    {
+      "frame": 295,
+      "label": "Sit down",
+      "confidence": 0.7329146089416162,
+      "current": "Sit down",
+      "stability": 27
+    },
+    {
+      "frame": 296,
+      "label": "Sit down",
+      "confidence": 0.747241287722931,
+      "current": "Sit down",
+      "stability": 28
+    },
+    {
+      "frame": 297,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 29
+    },
+    {
+      "frame": 298,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 30
+    },
+    {
+      "frame": 299,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 31
+    },
+    {
+      "frame": 300,
+      "label": "Sit down",
+      "confidence": 0.99,
+      "current": "Sit down",
+      "stability": 32
+    },
+    {
+      "frame": 301,
+      "label": "Sit down",
+      "confidence": 0.8109312409682954,
+      "current": "Sit down",
+      "stability": 33
+    },
+    {
+      "frame": 302,
+      "label": "Sit down",
+      "confidence": 0.8555422099908077,
+      "current": "Sit down",
+      "stability": 34
+    },
+    {
+      "frame": 303,
+      "label": "Sit down",
+      "confidence": 0.8860786788247771,
+      "current": "Sit down",
+      "stability": 35
+    },
+    {
+      "frame": 304,
+      "label": "Sit down",
+      "confidence": 0.6270125401904807,
+      "current": "Sit down",
+      "stability": 36
+    },
+    {
+      "frame": 305,
+      "label": "Sitting",
+      "confidence": 0.713734643281213,
+      "current": "Sitting",
+      "stability": 1
+    },
+    {
+      "frame": 306,
+      "label": "Sitting",
+      "confidence": 0.7205263615712341,
+      "current": "Sitting",
+      "stability": 2
+    },
+    {
+      "frame": 307,
+      "label": "Sitting",
+      "confidence": 0.7225370435998291,
+      "current": "Sitting",
+      "stability": 3
+    },
+    {
+      "frame": 308,
+      "label": "Sitting",
+      "confidence": 0.7674788339383929,
+      "current": "Sitting",
+      "stability": 4
+    },
+    {
+      "frame": 309,
+      "label": "Sitting",
+      "confidence": 0.8176891843175338,
+      "current": "Sitting",
+      "stability": 5
+    },
+    {
+      "frame": 310,
+      "label": "Sitting",
+      "confidence": 0.8429410728588391,
+      "current": "Sitting",
+      "stability": 6
+    },
+    {
+      "frame": 311,
+      "label": "Sitting",
+      "confidence": 0.7862718823249749,
+      "current": "Sitting",
+      "stability": 7
+    },
+    {
+      "frame": 312,
+      "label": "Sitting",
+      "confidence": 0.8446561134616165,
+      "current": "Sitting",
+      "stability": 8
+    },
+    {
+      "frame": 313,
+      "label": "Sitting",
+      "confidence": 0.8567536395968018,
+      "current": "Sitting",
+      "stability": 9
+    },
+    {
+      "frame": 314,
+      "label": "Sitting",
+      "confidence": 0.810539051379623,
+      "current": "Sitting",
+      "stability": 10
+    },
+    {
+      "frame": 315,
+      "label": "Sitting",
+      "confidence": 0.99,
+      "current": "Sitting",
+      "stability": 11
+    },
+    {
+      "frame": 316,
+      "label": "Sitting",
+      "confidence": 0.99,
+      "current": "Sitting",
+      "stability": 12
+    },
+    {
+      "frame": 317,
+      "label": "Sitting",
+      "confidence": 0.8687811454474971,
+      "current": "Sitting",
+      "stability": 13
+    },
+    {
+      "frame": 318,
+      "label": "Sitting",
+      "confidence": 0.6735224403645046,
+      "current": "Sitting",
+      "stability": 14
+    },
+    {
+      "frame": 319,
+      "label": "Get up",
+      "confidence": 0.5628413995134506,
+      "current": "Get up",
+      "stability": 1
+    },
+    {
+      "frame": 320,
+      "label": "Get up",
+      "confidence": 0.846328962311353,
+      "current": "Get up",
+      "stability": 2
+    },
+    {
+      "frame": 321,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 3
+    },
+    {
+      "frame": 322,
+      "label": "Get up",
+      "confidence": 0.7220668862674816,
+      "current": "Get up",
+      "stability": 4
+    },
+    {
+      "frame": 323,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 5
+    },
+    {
+      "frame": 324,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 6
+    },
+    {
+      "frame": 325,
+      "label": "Get up",
+      "confidence": 0.8624408703219323,
+      "current": "Get up",
+      "stability": 7
+    },
+    {
+      "frame": 326,
+      "label": "Get up",
+      "confidence": 0.6529273324812784,
+      "current": "Get up",
+      "stability": 8
+    },
+    {
+      "frame": 327,
+      "label": "Sitting",
+      "confidence": 0.6269043673417957,
+      "current": "Sitting",
+      "stability": 1
+    },
+    {
+      "frame": 328,
+      "label": "Get up",
+      "confidence": 0.7063596868632446,
+      "current": "Get up",
+      "stability": 1
+    },
+    {
+      "frame": 329,
+      "label": "Get up",
+      "confidence": 0.6766270947485123,
+      "current": "Get up",
+      "stability": 2
+    },
+    {
+      "frame": 330,
+      "label": "Get up",
+      "confidence": 0.7689855888829006,
+      "current": "Get up",
+      "stability": 3
+    },
+    {
+      "frame": 331,
+      "label": "Get up",
+      "confidence": 0.809880745729188,
+      "current": "Get up",
+      "stability": 4
+    },
+    {
+      "frame": 332,
+      "label": "Get up",
+      "confidence": 0.855989974449888,
+      "current": "Get up",
+      "stability": 5
+    },
+    {
+      "frame": 333,
+      "label": "Get up",
+      "confidence": 0.86380500341444,
+      "current": "Get up",
+      "stability": 6
+    },
+    {
+      "frame": 334,
+      "label": "Get up",
+      "confidence": 0.797285971151918,
+      "current": "Get up",
+      "stability": 7
+    },
+    {
+      "frame": 335,
+      "label": "Get up",
+      "confidence": 0.8402541627024652,
+      "current": "Get up",
+      "stability": 8
+    },
+    {
+      "frame": 336,
+      "label": "Get up",
+      "confidence": 0.7513854612017766,
+      "current": "Get up",
+      "stability": 9
+    },
+    {
+      "frame": 337,
+      "label": "Get up",
+      "confidence": 0.8616795642377981,
+      "current": "Get up",
+      "stability": 10
+    },
+    {
+      "frame": 338,
+      "label": "Get up",
+      "confidence": 0.8148708117258869,
+      "current": "Get up",
+      "stability": 11
+    },
+    {
+      "frame": 339,
+      "label": "Get up",
+      "confidence": 0.723626676435618,
+      "current": "Get up",
+      "stability": 12
+    },
+    {
+      "frame": 340,
+      "label": "Get up",
+      "confidence": 0.7014020464097125,
+      "current": "Get up",
+      "stability": 13
+    },
+    {
+      "frame": 341,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 14
+    },
+    {
+      "frame": 342,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 15
+    },
+    {
+      "frame": 343,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 16
+    },
+    {
+      "frame": 344,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 17
+    },
+    {
+      "frame": 345,
+      "label": "Get up",
+      "confidence": 0.7902566208245905,
+      "current": "Get up",
+      "stability": 18
+    },
+    {
+      "frame": 346,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 19
+    },
+    {
+      "frame": 347,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 20
+    },
+    {
+      "frame": 348,
+      "label": "Get up",
+      "confidence": 0.7536336740026619,
+      "current": "Get up",
+      "stability": 21
+    },
+    {
+      "frame": 349,
+      "label": "Get up",
+      "confidence": 0.8627796554960147,
+      "current": "Get up",
+      "stability": 22
+    },
+    {
+      "frame": 350,
+      "label": "Get up",
+      "confidence": 0.7505191375522786,
+      "current": "Get up",
+      "stability": 23
+    },
+    {
+      "frame": 351,
+      "label": "Get up",
+      "confidence": 0.8630999819308136,
+      "current": "Get up",
+      "stability": 24
+    },
+    {
+      "frame": 352,
+      "label": "Get up",
+      "confidence": 0.7865075737743019,
+      "current": "Get up",
+      "stability": 25
+    },
+    {
+      "frame": 353,
+      "label": "Get up",
+      "confidence": 0.7398363429378405,
+      "current": "Get up",
+      "stability": 26
+    },
+    {
+      "frame": 354,
+      "label": "Get up",
+      "confidence": 0.896752013958951,
+      "current": "Get up",
+      "stability": 27
+    },
+    {
+      "frame": 355,
+      "label": "Get up",
+      "confidence": 0.9251768270171032,
+      "current": "Get up",
+      "stability": 28
+    },
+    {
+      "frame": 356,
+      "label": "Get up",
+      "confidence": 0.9028330084761609,
+      "current": "Get up",
+      "stability": 29
+    },
+    {
+      "frame": 357,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 30
+    },
+    {
+      "frame": 358,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 31
+    },
+    {
+      "frame": 359,
+      "label": "Get up",
+      "confidence": 0.892173213371698,
+      "current": "Get up",
+      "stability": 32
+    },
+    {
+      "frame": 360,
+      "label": "Get up",
+      "confidence": 0.7754512484949992,
+      "current": "Get up",
+      "stability": 33
+    },
+    {
+      "frame": 361,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 34
+    },
+    {
+      "frame": 362,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 35
+    },
+    {
+      "frame": 363,
+      "label": "Get up",
+      "confidence": 0.99,
+      "current": "Get up",
+      "stability": 36
+    },
+    {
+      "frame": 364,
+      "label": "Get up",
+      "confidence": 0.8398885966393398,
+      "current": "Get up",
+      "stability": 37
+    },
+    {
+      "frame": 365,
+      "label": "Walk forward",
+      "confidence": 0.624826059322836,
+      "current": "Walk forward",
+      "stability": 1
+    },
+    {
+      "frame": 366,
+      "label": "Walk forward",
+      "confidence": 0.696930237886155,
+      "current": "Walk forward",
+      "stability": 2
+    },
+    {
+      "frame": 367,
+      "label": "Walk forward",
+      "confidence": 0.8999530388707224,
+      "current": "Walk forward",
+      "stability": 3
+    },
+    {
+      "frame": 368,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 4
+    },
+    {
+      "frame": 369,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 5
+    },
+    {
+      "frame": 370,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 6
+    },
+    {
+      "frame": 371,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 7
+    },
+    {
+      "frame": 372,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 8
+    },
+    {
+      "frame": 373,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 9
+    },
+    {
+      "frame": 374,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 10
+    },
+    {
+      "frame": 375,
+      "label": "Walk forward",
+      "confidence": 0.8109108721457305,
+      "current": "Walk forward",
+      "stability": 11
+    },
+    {
+      "frame": 376,
+      "label": "Walk forward",
+      "confidence": 0.7540803926954952,
+      "current": "Walk forward",
+      "stability": 12
+    },
+    {
+      "frame": 377,
+      "label": "Walk forward",
+      "confidence": 0.7782027280055986,
+      "current": "Walk forward",
+      "stability": 13
+    },
+    {
+      "frame": 378,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 14
+    },
+    {
+      "frame": 379,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 15
+    },
+    {
+      "frame": 380,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 16
+    },
+    {
+      "frame": 381,
+      "label": "Walk forward",
+      "confidence": 0.7336113788577748,
+      "current": "Walk forward",
+      "stability": 17
+    },
+    {
+      "frame": 382,
+      "label": "Walk forward",
+      "confidence": 0.7315256572774806,
+      "current": "Walk forward",
+      "stability": 18
+    },
+    {
+      "frame": 383,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 19
+    },
+    {
+      "frame": 384,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 20
+    },
+    {
+      "frame": 385,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 21
+    },
+    {
+      "frame": 386,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 22
+    },
+    {
+      "frame": 387,
+      "label": "Walk forward",
+      "confidence": 0.99,
+      "current": "Walk forward",
+      "stability": 23
+    },
+    {
+      "frame": 388,
+      "label": "Walk forward",
+      "confidence": 0.8663048471063359,
+      "current": "Walk forward",
+      "stability": 24
+    },
+    {
+      "frame": 389,
+      "label": "Walk forward",
+      "confidence": 0.9192114834556617,
+      "current": "Walk forward",
+      "stability": 25
+    },
+    {
+      "frame": 390,
+      "label": "Walk forward",
+      "confidence": 0.9664778057806034,
+      "current": "Walk forward",
+      "stability": 26
+    },
+    {
+      "frame": 391,
+      "label": "Walk forward",
+      "confidence": 0.7191982093191764,
+      "current": "Walk forward",
+      "stability": 27
+    }
+  ]
+}

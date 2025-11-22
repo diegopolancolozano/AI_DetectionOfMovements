@@ -222,16 +222,25 @@ def main():
     print("="*60 + "\n")
     
     # Intentar abrir la cámara
-    # Para Droidcam, usa el índice 1 o 2 si 0 no funciona
-    camera_index = 2
-    cap = cv2.VideoCapture(camera_index)
+    # Probar diferentes índices automáticamente
+    camera_index = None
+    for idx in [0, 1, 2]:
+        cap = cv2.VideoCapture(idx)
+        if cap.isOpened():
+            camera_index = idx
+            print(f"✅ Cámara encontrada en índice {idx}")
+            break
+        cap.release()
+    
+    if camera_index is None:
+        cap = None
     
     # Configuraciones para mejor rendimiento con Droidcam
-    if cap.isOpened():
+    if cap is not None and cap.isOpened():
         cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)  # Reducir buffer para menos latencia
         cap.set(cv2.CAP_PROP_FPS, 30)
     
-    if not cap.isOpened():
+    if cap is None or not cap.isOpened():
         print("❌ No se pudo abrir la cámara")
         print("💡 Si usas Droidcam, intenta cambiar el índice de cámara")
         print("   Abre el código y cambia VideoCapture(0) a VideoCapture(1) o VideoCapture(2)")
@@ -255,9 +264,9 @@ def main():
             print("❌ Error al leer frame")
             break
         
-        # Rotar 90 grados a la derecha si es la cámara 2
-        if camera_index == 2:
-            frame = cv2.rotate(frame, cv2.ROTATE_90_CLOCKWISE)
+        # Rotar 90 grados a la derecha si es la cámara 2 (comentado para Windows)
+        # if camera_index == 2:
+        #     frame = cv2.rotate(frame, cv2.ROTATE_90_CLOCKWISE)
         
         # Convertir a RGB para MediaPipe
         frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
